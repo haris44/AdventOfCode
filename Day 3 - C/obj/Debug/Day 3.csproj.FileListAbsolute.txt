@@ -1,0 +1,6 @@
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3\bin\Debug\Day 3.exe.config
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3\bin\Debug\Day 3.exe
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3\bin\Debug\Day 3.pdb
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3\obj\Debug\Day 3.csprojResolveAssemblyReference.cache
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3\obj\Debug\Day 3.exe
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3\obj\Debug\Day 3.pdb

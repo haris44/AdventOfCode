@@ -1,0 +1,5 @@
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\AdventOfCode\Day2\bin\Debug\Day2.exe.config
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\AdventOfCode\Day2\bin\Debug\Day2.exe
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\AdventOfCode\Day2\bin\Debug\Day2.pdb
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\AdventOfCode\Day2\obj\Debug\Day2.exe
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\AdventOfCode\Day2\obj\Debug\Day2.pdb

@@ -1,0 +1,3 @@
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\AdventOfCode\AdventOfCode\bin\Debug\AdventOfCode.exe.config
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\AdventOfCode\AdventOfCode\obj\Debug\AdventOfCode.exe
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\AdventOfCode\AdventOfCode\obj\Debug\AdventOfCode.pdb

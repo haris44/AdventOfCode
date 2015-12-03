@@ -1,0 +1,10 @@
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\bin\Debug\Day_3___F.exe.config
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\bin\Debug\Day_3___F.XML
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\bin\Debug\Day_3___F.exe
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\bin\Debug\Day_3___F.pdb
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\bin\Debug\FSharp.Core.dll
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\bin\Debug\FSharp.Core.xml
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\bin\Debug\fr\FSharp.Core.resources.dll
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\obj\Debug\Day 3 - F.fsprojResolveAssemblyReference.cache
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\obj\Debug\Day_3___F.exe
+C:\Users\Alexandre BERTRAND\documents\visual studio 2012\Projects\AdventOfCode\Day 3 - F\obj\Debug\Day_3___F.pdb
