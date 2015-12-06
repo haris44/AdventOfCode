@@ -13,24 +13,48 @@ namespace Day_4___C
         {
             string entry = "bgvyzdsv";
             int sortie = 1;
-            string num = "0000000";
+            string num = "0";
 
-            //while (sortie == 1)
-            //{
+            while (sortie == 1)
+            {
+                string hash; 
                 StringBuilder test = new StringBuilder();
                 test.Append(entry);
                 test.Append(num);
                 string input = test.ToString();
-                Console.WriteLine(test);
-            using (MD5 md5Hash = MD5.Create())
+                MD5 md5Hash = MD5.Create();
+            
+                hash = GetMd5Hash(md5Hash, input);
+                
+            
+
+                
+            int convert = int.Parse(num);
+            convert++;
+            num = convert.ToString();
+
+                char carac = '0';
+                int i = 0;
+                while(carac == '0' && i <= 7){
+                    carac = hash[i];
+                    i++;
+                }
+
+         
+
+            if (i == 7)
             {
-                string hash = GetMd5Hash(md5Hash, input);
                 Console.WriteLine(hash);
+                Console.WriteLine(test);
+                sortie = 0;
+            }
+            
+
+
             }
 
-                //}
+            Console.ReadLine();
 
-                Console.ReadLine();
         }
 
         static string GetMd5Hash(MD5 md5Hash, string input)

@@ -1,0 +1,6 @@
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\Day 5 - C\Day 5 - C\bin\Debug\Day 5 - C.exe.config
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\Day 5 - C\Day 5 - C\bin\Debug\Day 5 - C.exe
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\Day 5 - C\Day 5 - C\bin\Debug\Day 5 - C.pdb
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\Day 5 - C\Day 5 - C\obj\Debug\Day 5 - C.csprojResolveAssemblyReference.cache
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\Day 5 - C\Day 5 - C\obj\Debug\Day 5 - C.exe
+c:\users\alexandre bertrand\documents\visual studio 2012\Projects\Day 5 - C\Day 5 - C\obj\Debug\Day 5 - C.pdb
