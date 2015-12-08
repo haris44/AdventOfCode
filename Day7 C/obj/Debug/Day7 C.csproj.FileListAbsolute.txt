@@ -1,0 +1,6 @@
+c:\users\macpro\documents\visual studio 2015\Projects\Day7 C\Day7 C\bin\Debug\Day7 C.exe.config
+c:\users\macpro\documents\visual studio 2015\Projects\Day7 C\Day7 C\bin\Debug\Day7 C.exe
+c:\users\macpro\documents\visual studio 2015\Projects\Day7 C\Day7 C\bin\Debug\Day7 C.pdb
+c:\users\macpro\documents\visual studio 2015\Projects\Day7 C\Day7 C\obj\Debug\Day7 C.csprojResolveAssemblyReference.cache
+c:\users\macpro\documents\visual studio 2015\Projects\Day7 C\Day7 C\obj\Debug\Day7 C.exe
+c:\users\macpro\documents\visual studio 2015\Projects\Day7 C\Day7 C\obj\Debug\Day7 C.pdb
