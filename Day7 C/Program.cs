@@ -8,163 +8,237 @@ namespace Day7_C
 {
     class Program
     {
-        public static Dictionary<string, int> openWith;
+        public static Dictionary<string, string> openWith;
+        public static Dictionary<string, ushort> finalassoc;
         static void Main(string[] args)
         {
 
             string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Alexandre\Documents\AdventOfCode\Day7 C\day7.txt");
 
-            openWith = new Dictionary<string, int>();
+            openWith = new Dictionary<string, string>();
+            finalassoc = new Dictionary<string, ushort>();
 
             foreach (var line in lines)
             {
                 string[] mots = line.Split(' ');
+                string key = mots[mots.Length - 1];
 
-                if (mots[0] == "NOT")
-                {                  
-                    ManipulateFin(mots[3]);
-                    openWith[mots[3]] = (ushort)Manipulate(mots[1]);
-                }
-
-                else if (mots.Length == 3 && mots[1] == "->")
+                if (mots.Length == 3 && mots[1] == "->")
                 {
                     int m1 = 0;
-                    int.TryParse(mots[0], out m1);
 
-                    if(m1 == 0)
-                    {                       
-                        m1 = Manipulate(mots[0]);
+                    try
+                    {
+                        m1 = int.Parse(mots[0]);
+                        finalassoc.Add(key, (ushort)m1);
+                        openWith.Remove(key);
                     }
-
-                    ManipulateFin(mots[2]);
-                    openWith[mots[2]] = (ushort)m1;
+                    catch
+                    {
+                        openWith.Add(key, line);
+                    }         
                     
                 }
-                else if (mots[1] == "OR")
+                else
                 {
-                    int m1 = 0;
-                    int m2 = 0;                   
-                    int.TryParse(mots[0], out m1);
-                    int.TryParse(mots[2], out m2);
-
-                    if (m1 != 0) {
-                        
-                        m2 = Manipulate(mots[2]);
-                    }
-
-                    else if(m2 != 0) {
-                        
-                        m1 = Manipulate(mots[0]);
-                    }
-                    else if(m1 == 0 && m2 == 0)
-                    {
-                        m2 = Manipulate(mots[2]);
-                        m1 = Manipulate(mots[0]);
-                    }
-                    else
-                    {
-                        throw new Exception();
-                    }
-
-                    ManipulateFin(mots[4]);
-                    openWith[mots[4]] = (ushort)(m1 | m2);
-                  
-
+                    openWith.Add(key, line);
                 }
-                else if (mots[1] == "AND")
+            }
+            foreach (var line in lines)
+            {
+                string[] mots = line.Split(' ');
+                string key = mots[mots.Length - 1];
+                if (!finalassoc.ContainsKey(key))
+                    resolve(key, line);
+               
+            }
+
+            // Deuxième partie : 
+            ushort deuxieme = finalassoc["a"];
+            openWith = new Dictionary<string, string>();
+            finalassoc = new Dictionary<string, ushort>();
+
+            foreach (var line in lines)
+            {
+                string[] mots = line.Split(' ');
+                string key = mots[mots.Length - 1];
+
+                if (mots.Length == 3 && mots[1] == "->")
                 {
                     int m1 = 0;
-                    int m2 = 0;
-                    int.TryParse(mots[0], out m1);
-                    int.TryParse(mots[2], out m2);
 
-                    if (m1 != 0)
+                    try
                     {
-                        
-                        m2 = Manipulate(mots[2]);
+                        m1 = int.Parse(mots[0]);
+                        finalassoc.Add(key, (ushort)m1);
+                        openWith.Remove(key);
                     }
-
-                    else if (m2 != 0)
+                    catch
                     {
-                        
-                        m1 = Manipulate(mots[0]);
+                        openWith.Add(key, line);
                     }
-                    else if (m1 == 0 && m2 == 0)
-                    {
-                        m2 = Manipulate(mots[2]);
-                        m1 = Manipulate(mots[0]);
-                    }
-                    else
-                    {
-                        throw new Exception();
-                    }
-
-
-                    ManipulateFin(mots[4]);
-                    openWith[mots[4]] = (ushort)(m1 & m2);
-
-
-                }
-                else if (mots[1] == "RSHIFT")
-                {
-                    int m2 = 0;
-                    int.TryParse(mots[2], out m2);
-
-                    int m1 = 0;
-                    
-                    m1 = Manipulate(mots[0]);
-
-                    ManipulateFin(mots[4]);
-                    openWith[mots[4]] = (ushort)(m1 >> m2);
-
-
-                }
-
-                else if (mots[1] == "LSHIFT")
-                {
-                    int m2 = 0;
-                    int.TryParse(mots[2], out m2);
-
-                    int m1 = 0;
- 
-                    m1 = Manipulate(mots[0]);
-
-                    ManipulateFin(mots[4]);
-                    openWith[mots[4]] = (ushort)(m1 << m2);
 
                 }
                 else
                 {
-                    throw new Exception();
-                } 
-
+                    openWith.Add(key, line);
+                }
+            }
+            finalassoc["b"] = deuxieme;
+            foreach (var line in lines)
+            {
+                string[] mots = line.Split(' ');
+                string key = mots[mots.Length - 1];
+                if (!finalassoc.ContainsKey(key))
+                    resolve(key, line);
 
             }
 
-            Console.WriteLine(openWith["a"]);
+            Console.WriteLine(finalassoc["a"]);
             Console.ReadLine();
 
         }
 
-        public static void ManipulateFin(string cle)
+        public static void resolve(string key,string line)
         {
 
-            if (!openWith.Keys.Contains(cle))
+            string[] mots = line.Split(' ');
+
+            if (mots.Length == 3 && mots[1] == "->")
             {
-                openWith.Add(cle, 0);
+                int m1 = 0;
+
+                if (m1 == 0)
+                {
+                    if (!finalassoc.ContainsKey(mots[0]))
+                    {
+                        resolve(mots[0], openWith[mots[0]]);
+                    }
+                    m1 = finalassoc[mots[0]];
+                }
+
+                finalassoc.Add(key, (ushort)m1);
+                openWith.Remove(key);
+
             }
-            
 
-        }
-        public static int Manipulate(string cle)
-        {
-
-            if (!openWith.Keys.Contains(cle))
+            else if (mots[0] == "NOT")
             {
-                return 0;
+
+                int m1 = 0;
+                int.TryParse(mots[0], out m1);
+
+                if(m1 == 0) {
+                    if (!finalassoc.ContainsKey(mots[1]))
+                    {
+                        resolve(mots[1], openWith[mots[1]]);
+                    }
+                    m1 = finalassoc[mots[1]];
+                }
+                finalassoc.Add(key, (ushort)~(m1));
+                openWith.Remove(key);
+            }
+
+
+            else if (mots[1] == "OR")
+            {
+                int m1 = 0;
+                int m2 = 0;
+                int.TryParse(mots[0], out m1);
+                int.TryParse(mots[2], out m2);
+
+                if (m1 == 0)
+                {
+                    if (!finalassoc.ContainsKey(mots[0]))
+                    {
+                        resolve(mots[0], openWith[mots[0]]);
+                    }
+                    m1 = finalassoc[mots[0]];
+                }
+
+                if (m2 == 0)
+                {
+                    if (!finalassoc.ContainsKey(mots[2]))
+                    {
+                        resolve(mots[2], openWith[mots[2]]);
+                    }
+                    m2 = finalassoc[mots[2]];
+                }
+
+
+                finalassoc.Add(key, (ushort)(m1 | m2));
+                openWith.Remove(key);
+
+
+            }
+            else if (mots[1] == "AND")
+            {
+                int m1 = 0;
+                int m2 = 0;
+                int.TryParse(mots[0], out m1);
+                int.TryParse(mots[2], out m2);
+
+                if (m1 == 0)
+                {
+                    if (!finalassoc.ContainsKey(mots[0]))
+                    {
+                        resolve(mots[0], openWith[mots[0]]);
+                    }
+                    m1 = finalassoc[mots[0]];
+                }
+
+                if (m2 == 0)
+                {
+                    if (!finalassoc.ContainsKey(mots[2]))
+                    {
+                        resolve(mots[2], openWith[mots[2]]);
+                    }
+                    m2 = finalassoc[mots[2]];
+                }
+
+                finalassoc.Add(key, (ushort)(m1 & m2));
+                openWith.Remove(key);
+
+
+            }
+            else if (mots[1] == "RSHIFT")
+            {
+                int m1 = 0;
+                int m2 = 0;
+                int.TryParse(mots[2], out m2);               
+
+                if (!finalassoc.ContainsKey(mots[0]))
+                {
+                    resolve(mots[0], openWith[mots[0]]);
+                }
+                m1 = finalassoc[mots[0]];
+
+                finalassoc.Add(key, (ushort)(m1 >> m2));
+                openWith.Remove(key);
+
+            }
+
+            else if (mots[1] == "LSHIFT")
+            {
+                int m1 = 0;
+                int m2 = 0;
+                int.TryParse(mots[2], out m2);
+
+                if (!finalassoc.ContainsKey(mots[0]))
+                {
+                    resolve(mots[0], openWith[mots[0]]);
+                }
+                m1 = finalassoc[mots[0]];
+
+                finalassoc.Add(key, (ushort)(m1 << m2));
+                openWith.Remove(key);
+
             }
             else
-                return openWith[cle];
+            {
+                throw new Exception();
+            }
+
 
 
         }
