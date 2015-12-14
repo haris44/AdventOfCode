@@ -1,0 +1,5 @@
+c:\users\macpro\documents\visual studio 2015\Projects\Day10 - C\Day10 - C\bin\Debug\Day10 - C.exe.config
+c:\users\macpro\documents\visual studio 2015\Projects\Day10 - C\Day10 - C\bin\Debug\Day10 - C.exe
+c:\users\macpro\documents\visual studio 2015\Projects\Day10 - C\Day10 - C\bin\Debug\Day10 - C.pdb
+c:\users\macpro\documents\visual studio 2015\Projects\Day10 - C\Day10 - C\obj\Debug\Day10 - C.exe
+c:\users\macpro\documents\visual studio 2015\Projects\Day10 - C\Day10 - C\obj\Debug\Day10 - C.pdb

@@ -1,0 +1,6 @@
+c:\users\macpro\documents\visual studio 2015\Projects\Day9 - c\Day9 - c\bin\Debug\Day9 - c.exe.config
+c:\users\macpro\documents\visual studio 2015\Projects\Day9 - c\Day9 - c\bin\Debug\Day9 - c.exe
+c:\users\macpro\documents\visual studio 2015\Projects\Day9 - c\Day9 - c\bin\Debug\Day9 - c.pdb
+c:\users\macpro\documents\visual studio 2015\Projects\Day9 - c\Day9 - c\obj\Debug\Day9 - c.csprojResolveAssemblyReference.cache
+c:\users\macpro\documents\visual studio 2015\Projects\Day9 - c\Day9 - c\obj\Debug\Day9 - c.exe
+c:\users\macpro\documents\visual studio 2015\Projects\Day9 - c\Day9 - c\obj\Debug\Day9 - c.pdb
